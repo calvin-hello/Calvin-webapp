@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello from Express! Running under PM2.');
+  res.send('Hello from Express! Running under PM2.\n\
+    Testing Render system to see if app still runs.');
 });
 
 app.get('/health', (req, res) => {
