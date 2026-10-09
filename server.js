@@ -15,7 +15,9 @@ app.get('/crash', (req, res) => {
     throw new Error('Simulated crash');
   }, 100);
 });
-
+app.get("/version", (req, res) => {
+  res.send(`App version: ${process.env.APP_VERSION || 'unset'}`)
+})
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
